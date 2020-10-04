@@ -27,8 +27,8 @@
         # git add gitignore
     # git checkout <file name>
         # git checkout -p <file name>
-    # git reset HEAD <file name>
-        # git reset -p HEAD <file name>
+    # git reset <file name>
+        # git reset -p <file name>
     # git commit --amend
     # git revert <HEAD or commit ID>
     # git branch
@@ -157,12 +157,12 @@
     # git checkout -p <file name>:
         # Going line by line to see which latest changes to discard.
         
-# git reset HEAD <file name>:
+# git reset <file name>:
     # https://git-scm.com/docs/git-reset#_examples
     # To unstage files.
     # git reset is like the counterpart of git add add.
     
-    # git reset -p HEAD <file name>:
+    # git reset -p <file name>:
         # Unstage line by line
         
 # git commit --amend:
