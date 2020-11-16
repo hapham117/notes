@@ -46,9 +46,9 @@ def string_formatting_expressions():
     # String formatting expressions:
     number = 5.1234
     number2 = 1.9876
-    test = 'Test text {number:>4.2f}, {number2:.2f}'.format(number=number, number2=number2)
-    print("\n'Test text {number:>4.2f}, {number2:.2f}'.format(number=number, number2=number2):", test)
-        # Test text 5.12, 1.99
+    test = 'Test text {number:>12.2f}, {number2:.2f}'.format(number=number, number2=number2)
+    print(test)
+        # Test text         5.12, 1.99
     # Cheat sheet: https://i.gyazo.com/90231aae38f685b3b1a9eb8a1963d793.png
     # Documentation: https://docs.python.org/3/library/string.html#format-specification-mini-language
 # string_formatting_expressions()

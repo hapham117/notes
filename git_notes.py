@@ -1,4 +1,5 @@
 # Summary:
+    # git
     # git-scm.com
     # VCS
     # UEFI
@@ -24,7 +25,6 @@
     # git rm <file name>
     # git mv <file name>
     # .gitignore (file)
-        # git add gitignore
     # git checkout <file name>
         # git checkout -p <file name>
     # git reset <file name>
@@ -36,9 +36,39 @@
         # git checkout <branch name>
         # git branch -d <branch name>
         # git branch -D <branch name>
+        # git branch -r
+        # git branch -vv
         # git merge <branch name>
             # git merge --abort
+    # git rebase <branch name>
+        # git rebase --skip
+        # git rebase --continue
+        # git rebase -i <branch name>
+    # git remote
+        # git remote update
+    # git push
+        # git push -u <remote repo name> <branch name>
+        # git push --delete <remote repo> <remote branch>
+        # git push -f
+    # git fetch
+    # git pull
+    # git remove show origin
+    # SSH key-pair
+    # Credential helper
+    # Forking
+    # Pull request
+    # Issue tracker
+    # CI/CD:
+        # Continuous integration system (CI)
+        # Continuous Deployment (CD):
+    # Pipelines
+        # Artifacts
+    
         
+        
+# git:
+    # git is a distributed version control system.
+    # Distributed, meaning: Each developer has a copy of the whole repository on their local machine.
 
 # git-scm.com
     # SCM stands for Source Control Management, which basically means VCS (Version Control System)
@@ -96,11 +126,12 @@
         
 # vimdiff
 
-# Staging area (index):
+# Staging area (also known as index):
     # A file maintained by Git that contains all of the information about what files and changes are going to go into your next commit.
     
 # Working tree:
-    # Contains the current state of the project
+    # Also known as working directory.
+    # Contains the current state of the project.
     
 # git config -l:
     # Shows current config of git.
@@ -147,7 +178,6 @@
     # Rename or move files in the git directory.
     
 # .gitignore (file):
-    # git add .gitignore
     # A git file with a list of files and directories that git will ignore.
     
 # git checkout <file name>:
@@ -183,7 +213,7 @@
         # Switch branches. The working tree will be updated to match the selected branch.
         
     # git checkout -b <branch name>:
-        # Create a new branch and then switch to it.
+        # Create a new branch and then switch to it.f
         
     # git branch -d <branch name>:
         # Delete a branch.
@@ -192,14 +222,124 @@
         # Shortcut for: --delete --force
         # Forcibly delete a branch.
         
-    # git merge <branch name>:
-        # Merging a branch to the current branch you're on.
-        # If done correctly, both branches will be pointed at the same commit.
-        # Git uses two different algorithms to perform a merge:
-            # fast-forward merge:
-                # This kind of merge occurs when all the commits in the checked out branch are also in the branch that's being merged. If this is the case, we can say that the commit history of both branches doesn't diverge. There is no fork.
-            # three-way merge:
-                # Is performed when the history of the merging branches has diverged in some way, and there isn't a nice linear path to combine them via fast-forwarding. This happens when a commit is made on one branch after the point when both branches split.
-                
-        # git merge --abort:
-            # When you run a merge but there is a merge conflict and you don't want to solve it, us this command to abort the merge entirely.
+    # git branch -r:
+        # Show branches from remote repositories.
+        
+    # git branch -vv:
+        # Shows a list of tracking branches.
+        
+# git merge <branch name>:
+    # Example:
+        # git merge origin/master
+        # git merge my_branch
+    # Merging a branch to the current branch you're on.
+    # If done correctly, both branches will be pointed at the same commit.
+    # Git uses two different algorithms to perform a merge:
+        # fast-forward merge:
+            # This kind of merge occurs when all the commits in the checked out branch are also in the branch that's being merged. If this is the case, we can say that the commit history of both branches doesn't diverge. There is no fork.
+        # three-way merge:
+            # Is performed when the history of the merging branches has diverged in some way, and there isn't a nice linear path to combine them via fast-forwarding. This happens when a commit is made on one branch after the point when both branches split.
+    # Use git merge for noticable/big updates to the master branch.
+            
+    # git merge --abort:
+        # When you run a merge but there is a merge conflict and you don't want to solve it, us this command to abort the merge entirely.
+            
+# git rebase <branch name>:
+    # https://hackernoon.com/git-merge-vs-rebase-whats-the-diff-76413c117333
+    # https://git-scm.com/book/en/v2/Git-Branching-Rebasing
+    # https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History
+    # Changing the base commit that's used for our branch.
+    # Move the current branch on top of the specified branch.
+    # Rebasing prevents three-way merges thus will prevent messy git logs.
+    # Rebasing is meant to use with small changes on branches.
+    # You're basically rewriting the git log history, as opposed to creating a new commit like git merge.
+    # You shouldn't rewrite history when the commits have been published to a remote repo. That's because someone else may have already synchronized that repo with those contents. This rule is waived with pull requests.
+    
+    # git rebase --skip:
+        # Skip the rebase process.
+    
+    # git rebase --continue:
+        # Continue the rebase process.
+        
+    # git rebase -i <branch name>:
+        # Interactive mode.
+        # https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History
+        
+# git remote:
+    # https://git-scm.com/docs/git-remote
+    
+    # git remote update:
+        # The old way to write: git fetch --all
+        # Update all of your branches set to track remote ones, but not merge any changes in.
+        # Get the contents of remote branches without automatically merging any contents into the local branches.
+        
+# git push:
+    # Upload files and changes to a remote git repository.
+    
+    # git push -u <remote repo name> <branch name>:
+        # https://devconnected.com/how-to-set-upstream-branch-on-git/
+        # -u is short for -set-upstream
+        # Example:
+            # git push -u origin remote_branch
+        # The -u flag stands for 'create upstream branch'.
+        # Upstream branches are closely associated with remote branches.
+        # Upstream branches define the branch tracked on the remote repository by your local remote branch.
+        
+    # git push --delete <remote repo> <remote branch>:
+        # Deletes a remote branch.
+        # Example:
+            # git push --delete origin remote_branch
+    
+    # git push -f:
+        # Force push.
+    
+# git fetch:
+    # Fetches remote updates from one remote branch but doesn't merge to your local branch.
+    # Update only the branch you're on, but not merge any changes in
+    
+# git pull:
+    # git fetch + git merge
+    
+# git remove show origin:
+    # Show more info about a remote repository.
+    
+# SSH key-pair:
+    # Consists of a private-key and a public-key.
+    
+# Credential helper:
+    # A software that caches your credentials for a time window so that you don't have to type it with every interaction. 
+    
+# Forking:
+    # On github, a way of creating a copy of the given repository so that it belongs to our user.
+    # Make changes on this local forked repo, then send a pull request to the owner of the original remote repo so they can incorporate our forked repo to their remote repo.
+    
+# Pull request:
+    # On github, a commit or series of commits that you send to the ownder of the repository so that they incorporate it into their tree.
+    # You're basically requesting the owner(s) of the remote repo to pull your commits.
+    # Pull requests can be editted after being sent.
+    # Different users can also comment on your pull request after being sent.
+    
+# Issue tracker:
+    # Tells a team of devs what needs to be done, the state they're in and who does what.
+    
+# CI/CD:
+    # Example CI/CD software is Jenkins.
+    
+    # Continuous integration system (CI):
+        # Will build and test our code every time there's a change.
+        # This means that it will run whenever there's a new commit in the main branch of our code.
+        # It will also run any changes that come in through pull request.
+        
+    # Continuous Deployment (CD):
+        # Also known as Continuous Delivery.
+        # Once we have our code automatically built and tested, the next automation step is continuous deployment.
+        # This means that the new code is deployed often.
+        # The goal is to avoid roll outs with a lot of changes between two versions of a project and instead do incremental updates with only a few changes at a time.
+        # This allows errors to be caught and fixed early.
+        
+# Pipelines:
+    # Specify the steps that need to run to get the result you want.
+    
+    # Artifacts:
+        # The name used to describe any files that are generated as part of the pipeline.
+        # This typically includes the compiled versions of the code but can include other generated files like PDFs for the documentaiont or OS specific packages for easy installation.
