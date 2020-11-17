@@ -8,11 +8,16 @@
             # Module
         # Catalog
         # Declaring and referring resources
+        # Node
+            # Node definitions
+        # Puppet parser validate
+        # rspec tests
     # Scale
     # Unmanaged configuration
     # A list of Configuration Management Systems
     # Infrastructure as Code (IaC)
     # Domain-Specific Language (DSL)
+    # Production
     
     
 # ==============================================================================
@@ -30,7 +35,7 @@
     
     # Resources:
         # The basic unit for modeling the configuration that we want to manage.
-        
+
     # Facts:
         # Variables that represent the caracteristics of the system.
         # For example, what the current OS is, how much memory the computer has, whether it's a virtual machine or not, what the current IP address is.
@@ -38,16 +43,28 @@
     # Manifests:
         # Files that end with a .pp extension.
         # A file that stores the rules that we want to apply. These files are stored in a directory called 'manifests'.
+        # The first manifest that puppet reads is called 'init.pp'.
         
         # Module:
             # A collection of manifests and associated data.
-            # This file should be called 'init.pp' and it should define a class with the same name as the module that you're creating.
         
     # Catalog:
         # The list of rules that are generated for one specific computer once the server has evaluated all variables, conditionals, and functions.
         
     # Declaring and referring resources:
         # We write resource types in lowercase when declaring them, but capitalize them when referring to them from another resource's attribute.
+        
+    # Node:
+        # Any system where we can run a Puppet agent.
+        
+        # Node definitions:
+            # These are files that are stored with the name 'site.pp' which isn't part of any module. Instead, it just defines what classes will be included for what nodes.
+            
+    # Puppet parser validate:
+        # Checks that the syntax of the manifests is correct.
+        
+    # rspec tests:
+        # Test manifests automatically. In these tests we can set the facts involved different values and check that the catalog ends up stating what we wanted it to.
 # ==============================================================================
 # Scale:
     # Being able to scale what we do means that we can keep achieving large impacts with the same amount of effort.
@@ -68,6 +85,8 @@
 # Domain-Specific Language (DSL):
     # A programming language that's more limited in scope. Unlike General Purpose Languages like Python, Ruby, Java or Go.
 # ==============================================================================
+# Production:
+    # The parts of the infrastructure where as service is executed and served to its users.
 # ==============================================================================
 # ==============================================================================
 # ==============================================================================
