@@ -18,6 +18,13 @@
     # Infrastructure as Code (IaC)
     # Domain-Specific Language (DSL)
     # Production
+    # Cloud
+        # Software as a Service (SaaS)
+        # Platform as a Service (PaaS)
+        # Infrastructure as a Service (IaaS)
+        # Regions
+        # Capacity
+        # Scaling
     
     
 # ==============================================================================
@@ -88,6 +95,31 @@
 # Production:
     # The parts of the infrastructure where as service is executed and served to its users.
 # ==============================================================================
+# Cloud:
+    # A service that's running somewhere else. Either in the datacenter or other remote servers that we can reach over the internet.
+    
+    # Software as a Service (SaaS):
+        # When a Cloud provider delivers an entire application or program to the cusomer.
+        
+    # Platform as a Service (PaaS):
+        # When a Cloud provider offers a preconfigured platform to the customer.
+        
+    # Infrastructure as a Service (IaaS):
+        # When a Cloud provider supplies only the bare-bones computing experience.
+        # Some IaaS products are:
+            # Amazon's EC2
+            # Google Compute Engine
+            # Microsoft Azure Compute
+            
+    # Regions:
+        # A geographical location containing a number of data centers, regions contain zones and zones can contain one or more physical data centers.
+        # Large cloud providers usually offer their services in lots of different regions around the world. Generally, the region and zone you select should be closest to your users, the farther your users are from the physical data center, the more latency they may experience.
+        
+    # Capacity:
+        # How much the service can deliver.
+        
+    # Scaling:
+        # Changing the capacity. Upscaling and downscaling.
 # ==============================================================================
 # ==============================================================================
 # ==============================================================================
