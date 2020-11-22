@@ -38,6 +38,10 @@
     # Reference images
     # Templating
     # Disk image
+    # Load balancer
+    # Autoscaling
+    # Orchestration
+    # Resources as code
     
     
 # ==============================================================================
@@ -101,6 +105,7 @@
 # ==============================================================================
 # Infrastructure as Code (IaC):
     # When all the configuration necessary to deploy and manage a node in the infrastructure is stored in version control.
+    # Using machine-readable files to automate configuration.
 # ==============================================================================
 # Domain-Specific Language (DSL):
     # A programming language that's more limited in scope. Unlike General Purpose Languages like Python, Ruby, Java or Go.
@@ -172,9 +177,24 @@
 # Disk image:
     # A snapshot of a virtual machine's disk at a given point in time.
 # ==============================================================================
+# Load balancer:
+    # Ensures that each node receives a balanced number of requests.
+    
+    # Round robin:
+        # To give each node 1 request.
 # ==============================================================================
+# Autoscaling:
+    # Allows the service to increase or reduce capacity as needed, while the service owner only pays for the cost of the machines that are in use at any given time.
 # ==============================================================================
+# Orchestration:
+    # The automated configuration and coordination of complex IT systems and services.
+    # In other words, orchestration means automating a lot of different things that need to talk to each other.
 # ==============================================================================
+# Resources as code:
+    # Amazon has CloudFormation
+    # Google has Cloud Deployment Manager
+    # Microsoft has Azure Resource Manager
+    # OpenStack has Heat Orchestration Templates
 # ==============================================================================
 # ==============================================================================
 # ==============================================================================
