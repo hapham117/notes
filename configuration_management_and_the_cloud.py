@@ -42,6 +42,13 @@
     # Autoscaling
     # Orchestration
     # Resources as code
+    # Persistent storage
+    # Ephemeral storage
+    # Throughput
+    # Input/Output Operations Per Second (IOPS)
+    # Hot data
+    # Cold data
+    # Sticky sessions
     
     
 # ==============================================================================
@@ -196,12 +203,28 @@
     # Microsoft has Azure Resource Manager
     # OpenStack has Heat Orchestration Templates
 # ==============================================================================
+# Persistent storage:
+    # Usee for instances that are long lived and need to keep data across reboots and upgrades.
 # ==============================================================================
+# Ephemeral storage:
+    # Used for instances that are only temporary and only need to keep local data while they're running.
 # ==============================================================================
+# Throughput:
+    # The amount of data that you can read and write in a given amount of time.
 # ==============================================================================
+# Input/Output Operations Per Second (IOPS):
+    # Measure how many reads or writes you can do in one second, no matter how much data you're accessing.
 # ==============================================================================
+# Hot data:
+    # Accessed frequently and stored in hot storage.
+    # These are usually built using solid state disks.
 # ==============================================================================
+# Cold data:
+    # Accessed infrequently and stored in cold storage.
+    # These are usually built using spinning hard disks.
 # ==============================================================================
+# Sticky sessions:
+    # All requests from the same client always go to the same backend server.
 # ==============================================================================
 # ==============================================================================
 # ==============================================================================
