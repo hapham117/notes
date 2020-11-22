@@ -25,6 +25,19 @@
         # Regions
         # Capacity
         # Scaling
+            # Horizontal scaling
+            # Vertical scaling
+            # Automatic scaling
+            # Manual scaling
+        # Containers
+        # Types of clouds:
+            # Public clouds
+            # Private clouds
+            # Hybrid clouds
+            # Multi-clouds
+    # Reference images
+    # Templating
+    # Disk image
     
     
 # ==============================================================================
@@ -120,9 +133,44 @@
         
     # Scaling:
         # Changing the capacity. Upscaling and downscaling.
+        
+        # Horizontal scaling:
+            # We add more nodes into the pool that's part of a specific service.
+            # For example, you add more servers to increase the capacity.
+            
+        # Vertical scaling:
+            # Here you make your nodes bigger instead of adding more nodes.
+            # When we say bigger here, we're talking about the resources assigned to the nodes like memories, CPU, and disk space.
+            # For example, a database server with a 100 gb of disk space can store more data than with only 10 gb of space. To scale this deployment we can just add a bigger disk to the machine and the same idea works for a CPU and memory too.
+            
+        # Automatic scaling:
+            # The service offered by the Cloud provider will use metrics to automatically increase or decrease the capacity of the system.
+            
+        # Manual scaling:
+            # Changes are controlled by humans instead of software.
+            # When the Cloud deployment isn't very complex, it's usually easier for smaller organizations to user manual scaling practices.
+            
+    # Containers:
+        # Applications that are packaged together with their configuration and dependancies.
+        
+    # Types of clouds:
+        # Public clouds:
+            # The cloud service provided to you by a third party. It's called public because Cloud providers offer services to the public. Like Microsoft Azure.
+        # Private clouds:
+            # When your company owns the services and the rest of your infrastructure, whether that's on-site or in a remote data center. Like Chimply.
+        # Hybrid clouds:
+            # A mixture of both public and private clouds.
+        # Multi-clouds:
+            # A mixture of public and/or private clouds across vendors.
 # ==============================================================================
+# Reference images:
+    # Store the contents of a machine in a reusable format.
 # ==============================================================================
+# Templating:
+    # The process of capturing all of the system configuration to let us create VMs in a repeatable way.
 # ==============================================================================
+# Disk image:
+    # A snapshot of a virtual machine's disk at a given point in time.
 # ==============================================================================
 # ==============================================================================
 # ==============================================================================
