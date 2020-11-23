@@ -49,6 +49,10 @@
     # Hot data
     # Cold data
     # Sticky sessions
+    # Content Delivery Networks (CDNs)
+    # Continuous integration system (CI system)
+    # Environment
+    # A/B testing
     
     
 # ==============================================================================
@@ -226,9 +230,17 @@
 # Sticky sessions:
     # All requests from the same client always go to the same backend server.
 # ==============================================================================
+# Content Delivery Networks (CDNs):
+    # Make up a network of physical hosts that are geographically located as close to the end users as possible.
 # ==============================================================================
+# Continuous integration system (CI system):
+    # Will build and test our code every time there's a change.
 # ==============================================================================
+# Environment:
+    # Everything needed to run the service.
 # ==============================================================================
+# A/B testing:
+    # Some requests are served using one set of code and configuration (A) and other requests are served using a different set of code and configuration (B).
 # ==============================================================================
 # ==============================================================================
 # ==============================================================================
